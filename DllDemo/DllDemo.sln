@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DllDemo", "DllDemo\DllDemo.vcxproj", "{30327122-1DA9-4C22-9445-9083F207D8AC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApp", "TestApp\TestApp.vcxproj", "{0B365E8F-61F4-4B89-AA4C-65194BE32406}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestAppDyn", "TestAppDyn\TestAppDyn.vcxproj", "{DC4D440D-C13D-424E-A141-8F35CCAE0BA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30327122-1DA9-4C22-9445-9083F207D8AC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{30327122-1DA9-4C22-9445-9083F207D8AC}.Debug|Win32.Build.0 = Debug|Win32
+		{30327122-1DA9-4C22-9445-9083F207D8AC}.Release|Win32.ActiveCfg = Release|Win32
+		{30327122-1DA9-4C22-9445-9083F207D8AC}.Release|Win32.Build.0 = Release|Win32
+		{0B365E8F-61F4-4B89-AA4C-65194BE32406}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0B365E8F-61F4-4B89-AA4C-65194BE32406}.Debug|Win32.Build.0 = Debug|Win32
+		{0B365E8F-61F4-4B89-AA4C-65194BE32406}.Release|Win32.ActiveCfg = Release|Win32
+		{0B365E8F-61F4-4B89-AA4C-65194BE32406}.Release|Win32.Build.0 = Release|Win32
+		{DC4D440D-C13D-424E-A141-8F35CCAE0BA3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DC4D440D-C13D-424E-A141-8F35CCAE0BA3}.Debug|Win32.Build.0 = Debug|Win32
+		{DC4D440D-C13D-424E-A141-8F35CCAE0BA3}.Release|Win32.ActiveCfg = Release|Win32
+		{DC4D440D-C13D-424E-A141-8F35CCAE0BA3}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
