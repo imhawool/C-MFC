@@ -1,0 +1,33 @@
+﻿빌드 시작: 2017-03-13 오전 10:22:28
+     1>2 노드의 "C:\Users\LSG\Desktop\예제\열혈강의 Visual C++ 윈도우 프로그래밍 - 예제 소스코드\Part 6 기타주제\33장 레지스트리\EnumSoftware\EnumSoftware\EnumSoftware.vcxproj" 프로젝트(build 대상)입니다.
+     1>PrepareForBuild:
+         "C:\Users\LSG\Desktop\예제\열혈강의 Visual C++ 윈도우 프로그래밍 - 예제 소스코드\Part 6 기타주제\33장 레지스트리\EnumSoftware\Debug\" 디렉터리를 만들고 있습니다.
+       InitializeBuildStatus:
+         "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\EnumSoftware.unsuccessfulbuild"을(를) 만들고 있습니다.
+       ClCompile:
+         모든 출력이 최신 상태입니다.
+         모든 출력이 최신 상태입니다.
+       ResourceCompile:
+         모든 출력이 최신 상태입니다.
+       ManifestResourceCompile:
+         모든 출력이 최신 상태입니다.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\LSG\Desktop\예제\열혈강의 Visual C++ 윈도우 프로그래밍 - 예제 소스코드\Part 6 기타주제\33장 레지스트리\EnumSoftware\Debug\EnumSoftware.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\EnumSoftware.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\LSG\Desktop\예제\열혈강의 Visual C++ 윈도우 프로그래밍 - 예제 소스코드\Part 6 기타주제\33장 레지스트리\EnumSoftware\Debug\EnumSoftware.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\LSG\Desktop\예제\열혈강의 Visual C++ 윈도우 프로그래밍 - 예제 소스코드\Part 6 기타주제\33장 레지스트리\EnumSoftware\Debug\EnumSoftware.lib" /MACHINE:X86 Debug\EnumSoftware.res
+         Debug\EnumSoftware.exe.embed.manifest.res
+         Debug\EnumSoftware.obj
+         Debug\EnumSoftwareDlg.obj
+         Debug\stdafx.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\EnumSoftware.exe.embed.manifest" /manifest Debug\EnumSoftware.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         모든 출력이 최신 상태입니다.
+       LinkEmbedManifest:
+         모든 출력이 최신 상태입니다.
+         EnumSoftware.vcxproj -> C:\Users\LSG\Desktop\예제\열혈강의 Visual C++ 윈도우 프로그래밍 - 예제 소스코드\Part 6 기타주제\33장 레지스트리\EnumSoftware\Debug\EnumSoftware.exe
+       FinalizeBuildStatus:
+         "Debug\EnumSoftware.unsuccessfulbuild" 파일을 삭제하고 있습니다.
+         "Debug\EnumSoftware.lastbuildstate"에 연결(touching)하고 있습니다.
+     1>"C:\Users\LSG\Desktop\예제\열혈강의 Visual C++ 윈도우 프로그래밍 - 예제 소스코드\Part 6 기타주제\33장 레지스트리\EnumSoftware\EnumSoftware\EnumSoftware.vcxproj" 프로젝트를 빌드했습니다(build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:00.83
