@@ -1,0 +1,34 @@
+﻿빌드 시작: 2017-03-27 오후 1:21:42
+     1>2 노드의 "C:\Users\LSG\C++MFC\C-MFC\KeyMove\KeyMove\KeyMove.vcxproj" 프로젝트(build 대상)입니다.
+     1>InitializeBuildStatus:
+         "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\KeyMove.unsuccessfulbuild"을(를) 만들고 있습니다.
+       ClCompile:
+         모든 출력이 최신 상태입니다.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\KeyMove.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt KeyMoveView.cpp
+         KeyMoveView.cpp
+       ResourceCompile:
+         모든 출력이 최신 상태입니다.
+       ManifestResourceCompile:
+         모든 출력이 최신 상태입니다.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\LSG\C++MFC\C-MFC\KeyMove\Debug\KeyMove.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\KeyMove.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\LSG\C++MFC\C-MFC\KeyMove\Debug\KeyMove.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\LSG\C++MFC\C-MFC\KeyMove\Debug\KeyMove.lib" /MACHINE:X86 Debug\KeyMove.res
+         Debug\KeyMove.exe.embed.manifest.res
+         Debug\KeyMove.obj
+         Debug\KeyMoveDoc.obj
+         Debug\KeyMoveView.obj
+         Debug\MainFrm.obj
+         Debug\stdafx.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\KeyMove.exe.embed.manifest" /manifest Debug\KeyMove.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         모든 출력이 최신 상태입니다.
+       LinkEmbedManifest:
+         모든 출력이 최신 상태입니다.
+         KeyMove.vcxproj -> C:\Users\LSG\C++MFC\C-MFC\KeyMove\Debug\KeyMove.exe
+       FinalizeBuildStatus:
+         "Debug\KeyMove.unsuccessfulbuild" 파일을 삭제하고 있습니다.
+         "Debug\KeyMove.lastbuildstate"에 연결(touching)하고 있습니다.
+     1>"C:\Users\LSG\C++MFC\C-MFC\KeyMove\KeyMove\KeyMove.vcxproj" 프로젝트를 빌드했습니다(build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:00.56

@@ -155,12 +155,13 @@ void CKeyMoveView::OnChar(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 void CKeyMoveView::OnSysKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
-	/*
+	
 	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
+	/*
 	CString strMessage = TEXT("");
 
-	WORD wResult = ::GetKeyState(VK_SPACE);
-	BYTE byHigh = HIBYTE(wResult);
+	WORD wResult = ::GetKeyState(VK_SPACE); // space 키 상태정보 수집
+	BYTE byHigh = HIBYTE(wResult);// 상위바이트의 1번비트가 1이면 눌러진 상태
 	if(byHigh & 0x01);
 	{
 		strMessage += TEXT("Alt + Space");
@@ -202,12 +203,12 @@ void CKeyMoveView::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 	/*실습예제1
 	CPoint ptChild;
 	CRect Rect;
-	m_wndChild.GetWindowRect(&Rect);
+	m_wndChild.GetWindowRect(&Rect); //child window 좌표 정보(스크린 기준)를 알아온다
 
 	ptChild.x = Rect.left;
 	ptChild.y = Rect.top;
 
-	ScreenToClient(&ptChild);
+	ScreenToClient(&ptChild); // 스크린 기준 좌표를 클라이언트 뷰 기준으로 환산
 
 	switch(nChar)
 	{
@@ -232,14 +233,14 @@ void CKeyMoveView::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 	//실습예제2
 	CPoint ptChild;
 	CRect Rect;
-	m_wndChild.GetWindowRect(&Rect);
+	m_wndChild.GetWindowRect(&Rect); 
 
 	ptChild.x = Rect.left;
 	ptChild.y = Rect.top;
 
 	ScreenToClient(&ptChild);
 	
-	if((nChar == VK_LEFT) && (::GetKeyState(VK_CONTROL)<0))
+	if((nChar == VK_LEFT) && (::GetKeyState(VK_CONTROL)<0)) // ctrl + 왼쪽 방향키를 눌렀을경우
 	{
 		ptChild.x -= 50;
 	}
@@ -285,27 +286,27 @@ void CKeyMoveView::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 	ptChild.x = Rect.left;
 	ptChild.y = Rect.top;
-	sizeChild.cx = Rect.right - Rect.left;
-	sizeChild.cy = Rect.bottom - Rect.top;
+	sizeChild.cx = Rect.right - Rect.left;//window width
+	sizeChild.cy = Rect.bottom - Rect.top;//window height
 	ScreenToClient(&ptChild);
 
 	switch(nChar)
 	{
 	case VK_LEFT:
-		sizeChild.cx -= 100;
+		sizeChild.cx -= 10;
 		break;
 	case VK_RIGHT:
-		sizeChild.cx += 100;
+		sizeChild.cx += 10;
 		break;
 	case VK_UP:
-		sizeChild.cy -= 100;
+		sizeChild.cy -= 10;
 		break;
 	case VK_DOWN:
-		sizeChild.cy += 100;
+		sizeChild.cy += 10;
 		break;
 	
 	}
-
+	
 	CString debugOut = "";
 
 	debugOut.Format("p1 x[%d] y[%d] \r\n",  (int)ptChild.x, (int)ptChild.y);
@@ -315,8 +316,9 @@ void CKeyMoveView::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 	TRACE(debugOut);
 
 
-	m_wndChild.SetWindowPos(&CWnd::wndTop, ptChild.x,ptChild.y,	200, 200,
+	m_wndChild.SetWindowPos(&CWnd::wndTop, ptChild.x,ptChild.y, sizeChild.cx,sizeChild.cy,
 		SWP_SHOWWINDOW | SWP_NOZORDER);
+	
 	CView::OnKeyDown(nChar, nRepCnt, nFlags);
 	
 }
