@@ -1,0 +1,279 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어(대한민국) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\CFtp.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.kor\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\CFtp.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 203, 59
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CFtp 정보"
+FONT 9, "굴림"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "CFtp 버전 3.0",IDC_STATIC,40,17,80,8,SS_NOPREFIX
+    LTEXT           "Programmed Date 2003. 9",IDC_STATIC,40,33,87,8
+    DEFPUSHBUTTON   "확인",IDOK,146,7,50,14,WS_GROUP
+    LTEXT           "",IDC_STATIC,40,40,8,8
+END
+
+IDD_CFTP_DIALOG DIALOGEX 0, 0, 387, 327
+STYLE DS_SETFONT | WS_POPUP | WS_VISIBLE | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+FONT 9, "굴림", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "종료",IDC_BUTTON_EXIT,319,305,60,16
+    PUSHBUTTON      "▶",IDC_BUTTON_UPLOAD,181,131,25,16
+    PUSHBUTTON      "◀",IDC_BUTTON_DOWNLOAD,181,158,25,16
+    CONTROL         "List1",IDC_LIST_LOCAL_FILE,"SysListView32",LVS_REPORT | LVS_SORTASCENDING | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_TABSTOP,7,82,170,147,WS_EX_STATICEDGE
+    CONTROL         "List1",IDC_LIST_REMOTE_FILE,"SysListView32",LVS_REPORT | LVS_SORTASCENDING | LVS_NOSORTHEADER | WS_TABSTOP,210,81,170,148,WS_EX_STATICEDGE
+    LTEXT           "Directory :",IDC_STATIC_LOCAL_DIR_TEXT,7,64,170,18
+    LTEXT           "Directory :",IDC_STATIC_REMOTE_DIR_TEXT,208,64,170,16
+    LTEXT           "",IDC_STATIC_UPLOAD,7,246,168,9
+    CONTROL         "Progress1",IDC_PROGRESS_UPLOAD,"msctls_progress32",0x0,7,268,169,14
+    CONTROL         "Progress1",IDC_PROGRESS_DOWNLOAD,"msctls_progress32",0x0,211,267,169,15
+    LTEXT           "",IDC_STATIC_DOWNLOAD,210,246,170,9
+    LTEXT           "",IDC_STATIC_UPLOADINFO,7,256,169,9
+    LTEXT           "",IDC_STATIC_DOWNLOADINFO,210,255,171,9
+    PUSHBUTTON      "MkDir",IDC_BUTTON_LMKDIR,7,232,38,12,NOT WS_VISIBLE
+    PUSHBUTTON      "Rename",IDC_BUTTON_LRENAME,51,232,38,12,NOT WS_VISIBLE
+    PUSHBUTTON      "Delete",IDC_BUTTON_LDELETE,95,232,38,12,NOT WS_VISIBLE
+    PUSHBUTTON      "Refresh",IDC_BUTTON_LREFRESH,139,232,38,12
+    PUSHBUTTON      "MkDir",IDC_BUTTON_RMKDIR,210,232,38,12,NOT WS_VISIBLE
+    PUSHBUTTON      "Rename",IDC_BUTTON_RRENAME,254,232,38,12,NOT WS_VISIBLE
+    PUSHBUTTON      "Delete",IDC_BUTTON_RDELETE,298,232,38,12,NOT WS_VISIBLE
+    PUSHBUTTON      "Refresh",IDC_BUTTON_RREFRESH,342,232,38,12
+    LISTBOX         IDC_LIST_STATUS,7,29,373,32,LBS_SORT | LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "[ MESSAGE ]",IDC_STATIC,20,16,55,11
+    PUSHBUTTON      "서버 연결 종료",IDC_BUTTON_UNCONNECT,91,283,60,16
+    PUSHBUTTON      "서버에 연결",IDC_BUTTON_CONNECT,27,283,60,16
+    CONTROL         "ASCII",IDC_RADIO_ASCII,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,335,14,34,10
+    CONTROL         "BINARY",IDC_RADIO_BINARY,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,289,14,41,10
+    GROUPBOX        "전송 형식",IDC_STATIC,275,4,98,24
+    PUSHBUTTON      "일시중지",IDC_BUTTON_ABORT,225,287,41,18
+    PUSHBUTTON      "이어받기",IDC_BUTTON_RESUME,271,287,41,18
+    CONTROL         "PASSIVE",IDC_RADIO_PASSIVE,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,227,14,43,10
+    CONTROL         "ACTIVE",IDC_RADIO_ACTIVE,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,183,14,41,10
+    GROUPBOX        "전송 모드",IDC_STATIC,171,4,98,24
+END
+
+IDD_DIALOG_CONNECT DIALOGEX 0, 0, 155, 123
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "서버연결 정보"
+FONT 9, "굴림", 0, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_COMBO_ADDRESS,55,7,93,46,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_NAME,55,25,93,46,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_PASSWORD,55,43,93,12,ES_PASSWORD | ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_PORT,55,59,93,46,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "연결",IDOK,7,101,65,15
+    PUSHBUTTON      "취소",IDCANCEL,83,101,65,15
+    CONTROL         "Anonymous",IDC_CHECK_ANONYMOUS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,55,76,93,12
+    LTEXT           "서버 주소 :",IDC_STATIC,7,10,42,10
+    LTEXT           "사용자 ID :",IDC_STATIC,7,27,42,10
+    LTEXT           "사용자 암호 :",IDC_STATIC,7,45,42,10
+    LTEXT           "익명 연결 :",IDC_STATIC,7,78,42,10
+    LTEXT           "포트 번호 :",IDC_STATIC,7,61,42,10
+END
+
+IDD_DIALOG_TEMP DIALOG 0, 0, 165, 75
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 9, "굴림"
+BEGIN
+    EDITTEXT        IDC_EDIT_INPUT,22,33,120,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,54,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,108,54,50,14
+    LTEXT           "Static",IDC_STATIC_TITLE,22,17,120,11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204B0"
+        BEGIN
+            VALUE "FileDescription", "CFtp MFC 응용 프로그램"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "CFtp"
+            VALUE "LegalCopyright", "Copyright (C) 2001"
+            VALUE "OriginalFilename", "CFtp.EXE"
+            VALUE "ProductName", "CFtp 응용 프로그램"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 52
+    END
+
+    IDD_CFTP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        BOTTOMMARGIN, 321
+    END
+
+    IDD_DIALOG_CONNECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 148
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_DIALOG_TEMP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 158
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 68
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_IMAGE        BITMAP                  "res\\Doc.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "CFtp 정보(&A)..."
+END
+
+#endif    // 한국어(대한민국) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE 18, 1
+#pragma code_page(949)
+#endif //_WIN32
+#include "res\CFtp.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.kor\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
