@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CFtp", "CFtp.vcxproj", "{FA44EE2C-5868-90D3-2E54-C574D9CE00BA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CFtp", "CFtp.vcxproj", "{E06A32E2-8398-1085-617D-696F6E90D9E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FA44EE2C-5868-90D3-2E54-C574D9CE00BA}.Debug|Win32.ActiveCfg = Release|Win32
-		{FA44EE2C-5868-90D3-2E54-C574D9CE00BA}.Debug|Win32.Build.0 = Release|Win32
-		{FA44EE2C-5868-90D3-2E54-C574D9CE00BA}.Release|Win32.ActiveCfg = Release|Win32
-		{FA44EE2C-5868-90D3-2E54-C574D9CE00BA}.Release|Win32.Build.0 = Release|Win32
+		{E06A32E2-8398-1085-617D-696F6E90D9E5}.Debug|Win32.ActiveCfg = Release|Win32
+		{E06A32E2-8398-1085-617D-696F6E90D9E5}.Debug|Win32.Build.0 = Release|Win32
+		{E06A32E2-8398-1085-617D-696F6E90D9E5}.Release|Win32.ActiveCfg = Release|Win32
+		{E06A32E2-8398-1085-617D-696F6E90D9E5}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
