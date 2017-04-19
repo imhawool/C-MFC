@@ -174,7 +174,7 @@ BOOL CCFtpDlg::OnInitDialog()
 
 	CButton* pCheck = (CButton*)GetDlgItem(IDC_RADIO_BINARY); //라디오 버튼(Binary로 초기화)
 	pCheck->SetCheck(1);
-	CButton* pCheck1 = (CButton*)GetDlgItem(IDC_RADIO_ACTIVE); //라디오 버튼(Active로 초기화)
+	CButton* pCheck1 = (CButton*)GetDlgItem(IDC_RADIO_PASSIVE); //라디오 버튼(PASSIVE로 초기화)
 	pCheck1->SetCheck(1);
 	return TRUE; // 포커스를 컨트롤에 설정하지 않으면 TRUE를 반환합니다.
 }
@@ -328,7 +328,7 @@ void CCFtpDlg::UpdateRemoteListCtrl()
 	int bWorking;
 	int index;
 	int imgType=0;
-	CString dirName;
+	CString dirName, strtemp;
 
 	m_ctrlRemoteFile.DeleteAllItems();
 
@@ -369,8 +369,10 @@ void CCFtpDlg::UpdateRemoteListCtrl()
 	}
 
 	if (!bDir) m_ctrlRemoteFile.InsertItem(0, "/..", 2);
-
-	m_pConnection->GetCurrentDirectory(m_strRemoteDirText);
+	CString strItem;
+	m_pConnection->GetCurrentDirectory(strItem);
+	CStringW strTemp =  CA2W(strItem, CP_UTF8);//디렉토리 또는 파일명
+	m_strRemoteDirText = CW2A(strTemp);
 
 	UpdateData(FALSE);
 }
@@ -417,8 +419,8 @@ void CCFtpDlg::OnButtonConnect()
 	if((dlg.m_strPassword).GetLength() == 0)
 		m_pConnection = m_Session.GetFtpConnection(dlg.m_strAddress);
 	else
-		m_pConnection = m_Session.GetFtpConnection(dlg.m_strAddress, dlg.m_strName, dlg.m_strPassword, _ttoi(dlg.m_strPort) ,mode );
-	
+		m_pConnection = m_Session.GetFtpConnection(dlg.m_strAddress, dlg.m_strName, dlg.m_strPassword, _ttoi(dlg.m_strPort), mode);
+			
 	
 	if(!m_pConnection)
 	{
@@ -461,6 +463,11 @@ void CCFtpDlg::OnDblclkListLocalFile(NMHDR* pNMHDR, LRESULT* pResult)
 		_chdir(str);
 		UpdateLocalListCtrl();
 	}
+	else
+	{
+		CString filePath=m_strLocalDirText + "\\" + str;
+		ShellExecute(NULL, "open", filePath, NULL, NULL, SW_SHOW);
+	}
 	*pResult = 0;
 }
 
@@ -490,10 +497,15 @@ void CCFtpDlg::OnDblclkListRemoteFile(NMHDR* pNMHDR, LRESULT* pResult)
 			return;
 		}
 
-		m_pConnection->GetCurrentDirectory(m_strRemoteDirText);
-		UpdateData(FALSE);
+		//m_pConnection->GetCurrentDirectory(m_strRemoteDirText);
+		//UpdateData(FALSE);
 
 		UpdateRemoteListCtrl();
+	}
+	else
+	{
+		//CString filePath = "//" + str;
+		//ShellExecute(NULL, "open", filePath, NULL, NULL, SW_SHOW);
 	}
 	*pResult = 0;
 }
@@ -544,9 +556,15 @@ void CCFtpDlg::OnButtonUpload()
 	try
 	{
 		if (((CButton*)GetDlgItem(IDC_RADIO_BINARY))->GetCheck() == BST_CHECKED)
+		{
+			((CButton*)GetDlgItem(IDC_RADIO_ASCII))->SetCheck(0);
 			mode = FTP_TRANSFER_TYPE_BINARY;
+		}
 		else
+		{
+			((CButton*)GetDlgItem(IDC_RADIO_BINARY))->SetCheck(0);
 			mode = FTP_TRANSFER_TYPE_ASCII;
+		}
 		remoteFile = m_pConnection->OpenFile(remote.GetBuffer(remote.GetLength()), GENERIC_WRITE, mode);
 	}
 	catch (CInternetException* pEx)
@@ -1298,11 +1316,18 @@ void CCFtpDlg::Get(CString local, CString remote, long fileSize)
 	try 
 	{
 		if (((CButton*)GetDlgItem(IDC_RADIO_BINARY))->GetCheck() == BST_CHECKED)
+		{
+			((CButton*)GetDlgItem(IDC_RADIO_ASCII))->SetCheck(0);
 			mode = FTP_TRANSFER_TYPE_BINARY;
+		}
 		else
+		{
+			((CButton*)GetDlgItem(IDC_RADIO_BINARY))->SetCheck(0);
 			mode = FTP_TRANSFER_TYPE_ASCII;
+		}
 		remoteFile=m_pConnection->OpenFile(remote.GetBuffer(remote.GetLength()), GENERIC_READ, mode);
 	}
+
 	catch (CInternetException* pEx) 
 	{
 		TCHAR szErr[1024];
@@ -1540,9 +1565,15 @@ void CCFtpDlg::OnBnClickedButtonResume()
 		try
 		{
 			if (((CButton*)GetDlgItem(IDC_RADIO_BINARY))->GetCheck() == BST_CHECKED)
-				mode = FTP_TRANSFER_TYPE_BINARY;
-			else
-				mode = FTP_TRANSFER_TYPE_ASCII;
+		{
+			((CButton*)GetDlgItem(IDC_RADIO_ASCII))->SetCheck(0);
+			mode = FTP_TRANSFER_TYPE_BINARY;
+		}
+		else
+		{
+			((CButton*)GetDlgItem(IDC_RADIO_BINARY))->SetCheck(0);
+			mode = FTP_TRANSFER_TYPE_ASCII;
+		}
 			remoteFile = m_pConnection->OpenFile(remote.GetBuffer(remote.GetLength()), GENERIC_READ, mode);
 		}
 		catch (CInternetException* pEx)

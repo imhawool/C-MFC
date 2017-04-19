@@ -20,6 +20,7 @@
 #define IDC_BUTTON_EXIT                 1007
 #define IDC_EDIT_PASSWORD               1007
 #define IDC_CHECK_ANONYMOUS             1008
+#define IDC_STATIC_REMOTE_DIR_TEXT2     1008
 #define IDC_COMBO_ADDRESS               1009
 #define IDC_BUTTON_CONNECT2             1009
 #define IDC_BUTTON_UNCONNECT            1009
@@ -52,6 +53,7 @@
 #define IDC_BUTTON_RESUME               1033
 #define IDC_RADIO_PASSIVE               1034
 #define IDC_RADIO_ACTIVE                1035
+#define IDC_SPLIT1                      1036
 
 // Next default values for new objects
 // 
@@ -59,7 +61,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        137
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1033
+#define _APS_NEXT_CONTROL_VALUE         1037
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
